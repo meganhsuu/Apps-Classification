@@ -1,5 +1,5 @@
 # Apps Classification Using Text Mining Techniques
-Using text mining techniques, this project classifies applications and games from the Windows Store based on their descriptions.
+This repository contains the codes and data for the final project of Text Mining course at UIUC in Spring 2024. This project attempts to classify applications and games from the Windows Store based on their desciptions by utilizing text mining techniques.
 
 ## Abstract
 This project focuses on analyzing the top applications and games available on the Windows Store platform. By leveraging a dataset extracted from the Windows Store site, this project aims to uncover patterns from app descriptions. Through text mining techniques, especially classification and advanced analysis, this study seeks to understand whether text mining can help effectively classify the category or age ratings based on the descriptions from applications and games.
@@ -9,16 +9,14 @@ Li et al. (2016) proposes classifying mobile applications by enriching app data 
 
 Olabenjo (2016) tackles app categorization using Naïve Bayes with metadata from top developer apps, showing Multinomial Naïve Bayes outperforms Bernoulli Naïve Bayes. Challenges arise in classifying gaming apps due to similar descriptions. The study emphasizes proper data collection, algorithm choice, and optimization.
 
-While few studies use app descriptions for categorization, Johann et al. (2017) introduced SAFE, a method to match app features from descriptions (by developers) and reviews (by users). They use general textual patterns that are frequently used in app stores rather than large datasets or machine learning features and parameters.
-
 Based on the key findings, while traditional approaches such as Naive Bayes and SVM remain relevant, the integration of advanced techniques like deep learning holds potential for enhancing accuracy and efficiency in app categorization tasks. As a result, this study have chosen to focus on Naïve Bayes and SVM, with a consideration for incorporating deep learning models. The evaluation will primarily focus on the F1 score, although we will also consider other metrics.
 
 ## Preprocessing
 
-### Category Relabeling
+#### 1. Category Relabeling
 With a total of 87 initial categories, we consolidated them into 15 main categories. Some categories with subcategories were merged into the main category for simplicity. Certain categories were reclassified, such as "Casino", "Puzzle & Trivia", "Strategy" were grouped as "Games"; "Music", "Photo & Video" were grouped as "Entertainment".
 
-### Text Cleaning
+#### 2. Text Cleaning
 All characters in the text were converted into lowercase. URLs and picture URLs were removed using regular expressions to eliminate irrelevant content. The text was filtered out any non-alphabetic characters, retaining only letters and apostrophes to maintain word integrity.
 
 The text was also tokenized into individual words using the NLTK library. Stopwords were removed to focus on meaningful terms, and words with a length of two characters or less are filtered out, as they typically carry little semantic meaning. Redundant spaces, including leading and trailing spaces, were also stripped from the text to ensure proper formatting and readability.
